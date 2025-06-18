@@ -11,6 +11,196 @@
 </head>
 
 <body>
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    .article-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      max-width: 380px;
+      margin: 0 auto;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+
+    .article-card:hover {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: #eee;
+      display: block;
+    }
+
+    .article-content {
+      padding: 22px 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-title {
+      font-size: 1.18rem;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+      color: #222;
+      line-height: 1.4;
+    }
+
+    .article-meta {
+      color: #a259e6;
+      font-size: 1rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .article-meta .article-author,
+    .article-meta .article-date {
+      color: #a259e6;
+    }
+
+    .article-summary {
+      font-size: 1rem;
+      color: #444;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .exam-list-custom {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px 18px 8px 18px;
+      max-width: 600px;
+      margin: 24px auto 0 auto;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .exam-item-custom {
+      margin-bottom: 28px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 14px;
+    }
+
+    .exam-item-custom:last-child {
+      border-bottom: none;
+    }
+
+    .exam-item-title-custom {
+      font-size: 1.35em;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 6px;
+      line-height: 1.18;
+    }
+
+    .exam-item-meta-custom {
+      color: #7c4dff;
+      font-size: 1em;
+      margin-bottom: 7px;
+      font-weight: 500;
+    }
+
+    .exam-item-author,
+    .exam-item-date {
+      color: #7c4dff;
+      font-weight: 500;
+    }
+
+    .exam-item-desc-custom {
+      color: #555;
+      font-size: 1.08em;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    .pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(162,89,230,0.07);
+  padding: 10px 18px;
+}
+
+.pagination-info {
+  color: #a259e6;
+  margin-right: 16px;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+.pagination-btn, .pagination-current, .pagination-ellipsis {
+  border: 1.5px solid #a259e6;
+  background: #fff;
+  color: #a259e6;
+  padding: 5px 15px;
+  margin: 0 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.08rem;
+  transition: background 0.15s, color 0.15s, border 0.15s;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 38px;
+  text-align: center;
+}
+
+.pagination-btn:hover {
+  background: #f3eaff;
+  color: #7c2ae8;
+  border-color: #7c2ae8;
+}
+
+.pagination-current {
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  border: 2px solid #222;
+  cursor: default;
+}
+
+.pagination-ellipsis {
+  border: none;
+  background: none;
+  color: #a259e6;
+  cursor: default;
+  padding: 5px 10px;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .pagination-container {
+    margin-top: 28px;
+  }
+  .pagination {
+    flex-wrap: wrap;
+    padding: 8px 8px;
+  }
+  .pagination-info {
+    margin-bottom: 6px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+}
+  </style>
   <header>
     <div class="logo">
       <img src="Scratch_logo.svg" alt="Scratch Logo">
@@ -47,73 +237,116 @@
     <br>
     <div class="course-container">
       <div class="course-card">
-        <img src="scrathbeginner.png" alt="Scratch Cơ bản (Beginner)">
+        <a href="lam-sao-hoc-ai-hieu-qua-trong-thoi-dai-cong-nghe-thay-doi-chong-mat.html">
+        <img src="blog001.png" alt="scrathAI"></a>
         <div class="course-info">
-          <h3>Làm sao học ai hiệu quả trong thời đại công nghệ thay đổi chóng mặt?</h3>
-          <div class="course-meta">
-            <div>Giáo viên: Lê Thùy Anh</div>
-            <div>Thời lượng: 20 buổi</div>
+          <a href="blog01.html"><h3>Làm sao học ai hiệu quả trong thời đại công nghệ thay đổi chóng mặt?</h3></a>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th5 19, 2025</span>
           </div>
-          <a href="scratch_beginner.html" class="course-detail-link">Xem chi tiết</a>
+          <h5>Tốc độ phát triển của trí tuệ nhân tạo (AI) đang khiến nhiều người cảm thấy lo lắng: Liệu con người có thể
+            theo kịp sự thay đổi liên tục này không?...</h5>
         </div>
       </div>
       <div class="course-card">
-        <img src="scrathadv.png" alt="Scratch nâng cao (Advanced)">
+        <img src="daytreveAI.png" alt="scratchAI">
         <div class="course-info">
-          <h3>Scratch nâng cao (Advanced)</h3>
-          <div class="course-meta">
-            <div>Giáo viên: Lê Thùy Anh</div>
-            <div>Thời lượng: 20 buổi</div>
+          <h3>Dạy trẻ về AI từ lớp 1 để phát triển trí tuệ nhân tạo có đạo đức và bền vững</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th5 17, 2025</span>
           </div>
-          <a href="scratch_adv.html" class="course-detail-link">Xem chi tiết</a>
+          <h5>Trong bối cảnh trí tuệ nhân tạo (AI) ngày càng lan rộng và trở thành một phần không thể thiếu của cuộc
+            sống hiện đại, việc dạy trẻ về AI không còn...</h5>
         </div>
       </div>
       <div class="course-card">
-        <img src="scratchexpert.png" alt="Lập trình trò chơi (Expert)">
+        <img src="huongdanlaptrinhgame.png" alt="scratchAI">
         <div class="course-info">
-          <h3>Lập trình trò chơi (Expert)</h3>
-          <div class="course-meta">
-            <div>Giáo viên: Lê Thùy Anh</div>
-            <div>Thời lượng: 30 buổi</div>
+          <h3>Hướng dẫn lập trình game đơn giản cho trẻ em bằng Scratch</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 20, 2025</span>
           </div>
-          <a href="scratch_expert.html" class="course-detail-link">Xem chi tiết</a>
+          <h5>Ngày nay, lập trình không còn là kỹ năng dành riêng cho người lớn hay chuyên gia công nghệ. Trẻ em hoàn
+            toàn có thể tiếp cận lập trình từ sớm thông...</h5>
         </div>
       </div>
       <div class="course-card">
-        <img src="scratch_contest.png" alt="Luyện thi tin học trẻ Scratch">
+        <img src="laptrinhsangtaoscrath.png" alt="scratchAI">
         <div class="course-info">
-          <h3>Luyện thi tin học trẻ Scratch</h3>
-          <div class="course-meta">
-            <div>Giáo viên: Lê Thùy Anh</div>
-            <div>Thời lượng: 15 buổi</div>
+          <h3>Lập trình sáng tạo cho trẻ em bằng các trò chơi Scratch</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 20, 2025</span>
           </div>
-          <a href="scratch_contest.html" class="course-detail-link">Xem chi tiết</a>
+          <h5>Trong thế giới hiện đại, nơi công nghệ len lỏi vào mọi lĩnh vực, việc giáo dục trẻ em không còn giới hạn
+            trong sách vở hay những bài giảng truyền...</h5>
         </div>
       </div>
       <div class="course-card">
-        <img src="robot.png" alt="Điều khiển robot với Scratch">
+        <img src="laptrinhdongian.png" alt="scratchAI">
         <div class="course-info">
-          <h3>Điều khiển robot với Scratch</h3>
-          <div class="course-meta">
-            <div>Giáo viên: Lê Thùy Anh</div>
-            <div>Thời lượng: 10 buổi</div>
+          <h3>Lập trình đơn giản và hiệu quả cho bé ngay từ lớp 1 với Scratch</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 20, 2025</span>
           </div>
-          <a href="scratch_robot.html" class="course-detail-link">Xem chi tiết</a>
+          <h5>Ngày nay, công nghệ không còn là "món ăn xa xỉ" chỉ dành cho người lớn hay học sinh cấp 2, cấp 3. Ngược
+            lại, việc cho trẻ tiếp cận với lập trình từ...</h5>
         </div>
       </div>
       <div class="course-card">
-        <img src="scrathAI.png" alt="Trí tuệ nhân tạo với Scratch">
+        <img src="duandongian.png" alt="scratchAI">
         <div class="course-info">
-          <h3>Trí tuệ nhân tạo với Scratch</h3>
-          <div class="course-meta">
-            <div>Giáo viên: Lê Thùy Anh</div>
-            <div>Thời lượng: 12 buổi</div>
+          <h3>Những dự án Scratch đơn giản giúp bé yêu thích học lập trình</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 17, 2025</span>
           </div>
-          <a href="scratch_ai.html" class="course-detail-link">Xem chi tiết</a>
+          <h5>Trong những năm gần đây, việc cho trẻ tiếp cận lập trình từ sớm đã trở thành xu hướng phổ biến tại nhiều
+            quốc gia, trong đó có Việt Nam. Thay vì bắt...</h5>
         </div>
       </div>
-    </div>
+      <div class="course-card">
+        <img src="goodscrathonl.png" alt="scratchAI">
+        <div class="course-info">
+          <h3>Khóa học Scratch trực tuyến tốt nhất dành cho trẻ</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 17, 2025</span>
+          </div>
+          <h5>Trong thời đại công nghệ phát triển như vũ bão, việc cho trẻ học lập trình từ sớm không chỉ là một xu
+            hướng mà còn là bước đi chiến lược để phát...</h5>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="kidscrath.png" alt="scratchAI">
+        <div class="course-info">
+          <h3>Dạy Scratch cho thiếu nhi: Phương pháp và tài liệu hay tại Hour Of Code Việt Nam</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 16, 2025</span>
+          </div>
+          <h5>Trong thời đại công nghệ phát triển mạnh mẽ, việc dạy Scratch cho thiếu nhi không chỉ là xu hướng mà còn
+            là bước khởi đầu quan trọng giúp trẻ tiếp...</h5>
+        </div>
+      </div>
+      <div class="course-card">
+        <img src="scrathlib.png" alt="scratchAI">
+        <div class="course-info">
+          <h3>Thư viện đề thi Scratch: Không gian tuyệt vời để luyện tập Scratch</h3>
+          <div class="exam-item-meta-custom">
+            bởi <span class="exam-item-author">Nguyễn Nam</span> | <span class="exam-item-date">Th4 16, 2025</span>
+          </div>
+          <h5>Thư viện đề thi Scratch là kho tài liệu phong phú, tổng hợp các bài kiểm tra và đề luyện tập theo chuẩn
+            chương trình. Nội dung được Hour Of Code...</h5>
+        </div>
   </section>
+  <div class="pagination-container">
+    <div class="pagination">
+      <span class="pagination-info">Trang 1 trên 9</span>
+      <span class="pagination-current">1</span>
+      <a href="blogpage02.html" class="pagination-btn">2</a>
+      <a href="blogpage03.html" class="pagination-btn">3</a>
+      <span class="pagination-ellipsis">...</span>
+      <a href="#" class="pagination-btn">&raquo;</a>
+      <a href="#" class="pagination-btn">Trang cuối &raquo;</a>
+    </div>
+  </div>
 
   <section class="scratch-hero-section-v2">
     <div class="scratch-hero-container-v2">
@@ -131,6 +364,7 @@
       </div>
     </div>
   </section>
+
   <footer style="background: #6c47a6; color: #fff; padding: 48px 0 0 0; margin-top: 60px;">
     <div
       style="max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 120px;">
